@@ -1,4 +1,16 @@
 #/bin/sh
+# Mainly inspired by DynHost script given by OVH
+#
+# Initial version was doing  nasty grep/cut on local ppp0 interface
+#
+# This coulnd't work in a NATed environnement like on ISP boxes
+# on private networks.
+#
+# This script uses curl to get the public IP, and then uses ipcheck
+# to update DynHost entry in OVH DNS
+#
+# Logfile: dynhost.log 
+ 
  
 #
 # CONFIG GOES HERE
