@@ -11,7 +11,7 @@
 #-------------------------------------------------------------------------
 # Checking internet connection.
 # If issue, restart wlan0
-# The good version for RPI4
+# The good version for RPI4 
 #=========================================================================
 
 # keep LAN alive
