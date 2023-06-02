@@ -18,7 +18,6 @@ echo "................................................"
 date "+%Y.%m.%d %H:%M:%S"
 echo " "
 ping -c2 google.com 
-
  
 if [ $? != 0 ] 
 then 
@@ -35,7 +34,7 @@ then
    echo "Wait 30 Sec"
    sleep 30s
    echo "send Email"
-   python SendMail.py rpi@one2care.be bruno.faucon@one2care.be 'Alerte Raspberry' 'Problème de connexion internet sur le nouveau Raspberry. Je redémarre wlan0'
+   python ./SendMail.py rpi@one2care.be bruno.faucon@one2care.be 'Alerte Raspberry RPI4-PROD' 'Problème de connexion internet sur le nouveau Raspberry. Je redémarre wlan0'
 fi
 echo "................................................"
 echo " "

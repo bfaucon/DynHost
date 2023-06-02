@@ -6,9 +6,11 @@
 # by Bruno Faucon - 2023
 # version 0.1 2023-04-11
 # test console + Email for alerting
+# version 0.2 2023-05-30  
+# mise à jour: Suppression du message si pas de paramètre pour éviter écriture dans le log.
 #-------------------------------------------------------------------------
 # tested with python 2.7 on Raspberry pi (wheezy) and MariaDB 5.5.34 on NAS Synology DS411J (DSM 5)
-#
+# 
 #-------------------------------------------------------------------------
 #
 #===================================================================
@@ -69,5 +71,6 @@ try:
 	EMAIL_TEXT =  sys.argv[4]
 	a = send_mail(EMAIL_FROM, EMAIL_TO, EMAIL_SUBJECT, EMAIL_TEXT)
 except:
-	print ("Script d'envoi d'Email Paramètres: Mail From, Mail To, Subject, Message")
+	a = 0
+        #print ("Script d'envoi d'Email Paramètres: Mail From, Mail To, Subject, Message")
 
